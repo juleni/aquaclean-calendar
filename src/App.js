@@ -1,25 +1,33 @@
-import React from 'react';
 import {
-  ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
+  ChakraProvider,
   Code,
   Grid,
+  Link,
+  Text,
   theme,
+  VStack,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import React from 'react';
+import Header from './components/Header';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+      <Box
+        h="100%"
+        textAlign="center"
+        fontSize="xl"
+        border="2px"
+        m="3"
+        borderRadius="lg"
+        borderColor="#22A699"
+        boxShadow="xl"
+      >
+        <Header />
+
+        <Grid p={3}>
           <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
             <Text>
               Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
             </Text>
